@@ -1,89 +1,88 @@
 // ============================================
-// 💝 CUSTOMIZE YOUR VALENTINE'S WEBSITE HERE 💝
+// 💝 PERSONALIZA TU PÁGINA DE SAN VALENTÍN AQUÍ 💝
 // ============================================
 
 const CONFIG = {
-    // Your Valentine's name that will appear in the title
-    // Example: "Jade", "Sarah", "Mike"
-    valentineName: "Jade",
+    // El nombre de tu persona especial que aparecerá en el título
+    // Ejemplo: "Andrea", "María", "Juan"
+    valentineName: "Andrea",
 
-    // The title that appears in the browser tab
-    // You can use emojis! 💝 💖 💗 💓 💞 💕
-    pageTitle: "Will You Be My Valentine? 💝",
+    // El título que aparecerá en la pestaña del navegador
+    // ¡Puedes usar emojis! 💝 💖 💗 💓 💞 💕
+    pageTitle: "¿Quieres ser mi Valentín? 💝",
 
-    // Floating emojis that appear in the background
-    // Find more emojis at: https://emojipedia.org
+    // Emojis flotando que aparecerán en el fondo
+    // Encuentra más emojis aquí: https://emojipedia.org
     floatingEmojis: {
-        hearts: ['❤️', '💖', '💝', '💗', '💓'],  // Heart emojis
-        bears: ['🧸', '🐻']                       // Cute bear emojis
+        hearts: ['❤️', '💖', '💝', '💗', '💓'],  // Emojis de corazones
+        bears: ['🧸', '🐻']                     // Emojis de ositos tiernos
     },
 
-    // Questions and answers
-    // Customize each question and its possible responses
+    // Preguntas y respuestas
+    // Personaliza cada pregunta y sus posibles respuestas
     questions: {
         first: {
-            text: "Do you like me?",                                    // First interaction
-            yesBtn: "Yes",                                             // Text for "Yes" button
-            noBtn: "No",                                               // Text for "No" button
-            secretAnswer: "I don't like you, I love you! ❤️"           // Secret hover message
+            text: "¿Te gusto?",                                // Primera pregunta
+            yesBtn: "Sí",                                       // Texto del botón "Sí"
+            noBtn: "No",                                        // Texto del botón "No"
+            secretAnswer: "¡No me gustas, te amo! ❤️"           // Mensaje secreto al pasar el cursor
         },
         second: {
-            text: "How much do you love me?",                          // For the love meter
-            startText: "This much!",                                   // Text before the percentage
-            nextBtn: "Next ❤️"                                         // Text for the next button
+            text: "¿Cuánto me amas?",                           // Para el medidor de amor
+            startText: "¡Tanto!",                               // Texto antes del porcentaje
+            nextBtn: "Siguiente ❤️"                             // Texto del botón para continuar
         },
         third: {
-            text: "Will you be my Valentine on February 14th, 2025? 🌹", // The big question!
-            yesBtn: "Yes!",                                             // Text for "Yes" button
-            noBtn: "No"                                                 // Text for "No" button
+            text: "¿Quieres ser mi Valentín el 14 de febrero de 2025? 🌹",  // ¡La gran pregunta!
+            yesBtn: "¡Sí!",                                                 // Texto del botón "Sí"
+            noBtn: "No"                                                     // Texto del botón "No"
         }
     },
 
-    // Love meter messages
-    // They show up depending on how far they slide the meter
+    // Mensajes que aparecen según la cantidad en el medidor de amor
     loveMessages: {
-        extreme: "WOOOOW You love me that much?? 🥰🚀💝",  // Shows when they go past 5000%
-        high: "To infinity and beyond! 🚀💝",              // Shows when they go past 1000%
-        normal: "And beyond! 🥰"                           // Shows when they go past 100%
+        extreme: "WOOOOW ¿Me amas tanto?? 🥰🚀💝",  // Cuando pasan de 5000%
+        high: "¡Hasta el infinito y más allá! 🚀💝", // Cuando pasan de 1000%
+        normal: "¡Y más allá! 🥰"                  // Cuando pasan de 100%
     },
 
-    // Messages that appear after they say "Yes!"
+    // Mensajes que aparecen después de que respondan "¡Sí!"
     celebration: {
-        title: "Yay! I'm the luckiest person in the world! 🎉💝💖💝💓",
-        message: "Now come get your gift, a big warm hug and a huge kiss!",
-        emojis: "🎁💖🤗💝💋❤️💕"  // These will bounce around
+        title: "¡Yay! ¡Soy la persona más afortunada del mundo! 🎉💝💖💝💓",
+        message: "¡Ahora ven por tu regalo, un gran abrazo calientito y un beso enorme!",
+        emojis: "🎁💖🤗💝💋❤️💕"  // Estos emojis aparecerán rebotando
     },
 
-    // Color scheme for the website
-    // Use https://colorhunt.co or https://coolors.co to find beautiful color combinations
+    // Esquema de colores para la página
+    // Usa https://colorhunt.co o https://coolors.co para encontrar combinaciones lindas
     colors: {
-        backgroundStart: "#ffafbd",      // Gradient start (try pastel colors for a soft look)
-        backgroundEnd: "#ffc3a0",        // Gradient end (should complement backgroundStart)
-        buttonBackground: "#ff6b6b",     // Button color (should stand out against the background)
-        buttonHover: "#ff8787",          // Button hover color (slightly lighter than buttonBackground)
-        textColor: "#ff4757"             // Text color (make sure it's readable!)
+        backgroundStart: "#ffafbd",    // Inicio del degradado (colores suaves recomendados)
+        backgroundEnd: "#ffc3a0",      // Fin del degradado (combina con backgroundStart)
+        buttonBackground: "#ff6b6b",   // Color de los botones (debe resaltar sobre el fondo)
+        buttonHover: "#ff8787",        // Color del botón al pasar el cursor (un poco más claro)
+        textColor: "#ff4757"           // Color del texto (asegúrate de que se lea bien)
     },
 
-    // Animation settings
-    // Adjust these if you want faster/slower animations
+    // Configuración de animaciones
+    // Ajusta estos valores si quieres animaciones más rápidas o lentas
     animations: {
-        floatDuration: "15s",           // How long it takes hearts to float up (10-20s recommended)
-        floatDistance: "50px",          // How far hearts move sideways (30-70px recommended)
-        bounceSpeed: "0.5s",            // Speed of bouncing animations (0.3-0.7s recommended)
-        heartExplosionSize: 1.5         // Size of heart explosion effect (1.2-2.0 recommended)
+        floatDuration: "15s",          // Duración en segundos para que los emojis floten (10-20s recomendado)
+        floatDistance: "50px",         // Distancia en píxeles que se mueven de lado (30-70px recomendado)
+        bounceSpeed: "0.5s",           // Velocidad del rebote (0.3-0.7s recomendado)
+        heartExplosionSize: 1.5        // Tamaño del efecto "explosión" de corazones (1.2-2.0 recomendado)
     },
 
-    // Background Music (Optional)
-    // Add your own music URL after getting proper licenses
+    // Música de fondo (Opcional)
+    // Agrega una URL de tu canción favorita con las licencias correspondientes
     music: {
-        enabled: true,                     // Music feature is enabled
-        autoplay: true,                    // Try to autoplay (note: some browsers may block this)
-        musicUrl: "https://res.cloudinary.com/dncywqfpb/video/upload/v1738399057/music_qrhjvy.mp3", // Music streaming URL
-        startText: "🎵 Play Music",        // Button text to start music
-        stopText: "🔇 Stop Music",         // Button text to stop music
-        volume: 0.5                        // Volume level (0.0 to 1.0)
+        enabled: true,                        // Habilita o deshabilita la música
+        autoplay: true,                       // Intenta reproducir automáticamente (puede estar bloqueado en algunos navegadores)
+        musicUrl: "https://res.cloudinary.com/dncywqfpb/video/upload/v1738399057/music_qrhjvy.mp3", // URL de la música en streaming
+        startText: "🎵 Reproducir música",     // Texto del botón para iniciar la música
+        stopText: "🔇 Detener música",         // Texto del botón para detener la música
+        volume: 0.5                            // Nivel de volumen (0.0 a 1.0)
     }
 };
 
-// Don't modify anything below this line unless you know what you're doing
-window.VALENTINE_CONFIG = CONFIG; 
+// No modifiques nada debajo de esta línea a menos que sepas lo que estás haciendo
+window.VALENTINE_CONFIG = CONFIG;
